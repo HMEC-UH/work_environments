@@ -1,0 +1,39 @@
+site_name: HMEC Work Environments
+docs_dir: src
+repo_name: Work Environments
+repo_url: https://github.com/HMEC-UH/work_environments
+
+nav:
+  - Welcome: index.md
+  - Utility of Python:
+    - Overview: python/index.md
+    - Conda: python/conda.md
+    - IDEs: python/ides.md
+  - Create Great Docs:
+    - Overview: mkdocs/index.md
+    - Workflow: mkdocs/workflow.md
+    - Configure: mkdocs/config.md
+  - MATLAB Addiction:
+    - Overview: matlab/index.md
+    - WEC-Sim: matlab/wecsim.md
+    - Linking w/ Python: matlab/py_linking.md    
+
+theme:
+  name: material
+  features:
+    - navigation.tracking  # Updates URL bar dynamically as you scroll
+    - navigation.indexes   # Allows folder titles to be clickable pages
+
+markdown_extensions:
+  - attr_list
+  - md_in_html
+  - admonition
+  - pymdownx.details # Optional: for collapsible blocks
+  - pymdownx.superfences # Optional: for code blocks inside admonitions
+  - pymdownx.keys
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+
+extra_css:
+  - stylesheets/alignments.css
