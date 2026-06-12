@@ -1,57 +1,77 @@
-This section introduces the workflow HMEC uses to create, maintain, and publish documentation using MkDocs.
+In the [Configuration](config.md) section, we installed [MkDocs](https://www.mkdocs.org/), created a project structure, and prepared a local development environment. With that foundation in place, we can begin creating documentation.
 
-This is not intended to be a comprehensive guide to MkDocs itself. If you would like to learn more about the project, visit the [official MkDocs website](https://www.mkdocs.org/).
-
-In short, MkDocs uses Markdown files to generate modern, searchable documentation websites. Contributors can focus on writing content while MkDocs handles navigation, formatting, search, and site generation. Markdown is intentionally simple and easy to learn, making it accessible to both technical and non-technical contributors.
-
-Many online resources are available to help you get started, including the official documentation, tutorials, videos, and AI-assisted tools such as ChatGPT, Claude, or GitHub Copilot.
-
-In a previous section, we discussed the value of GitHub for collaboration and version control. In this section, we focus on the practical workflow used to create and publish documentation:
-
-* Adding documentation to existing repository
-* Configure and launch a local development environment using VS Code
-* Create and edit documentation pages
-* Commit and push changes to GitHub
-* Publish documentation using GitHub Pages
-
-By following this workflow, contributors can develop documentation locally, preview changes before publication, and collaborate through familiar GitHub-based processes.
-
-## Set up repository
-GitHub natively supports and renders Markdown files (e.g., the "Readme.md" file). However, we want to go a bit further to create a more rich documentation for our repository using MkDocs.
-
-1. Start by launching VS Code then open the explorer:
-![explorer](assets/images/open_A.png){#explorer}
-
-2. The explorer gives you two options. The first is open a **local** directory/folder and the second is to clone a **remote** repository. We have already gone over how to clone a repository from GitHub to your **local** machine, so we'll assume we can just point to it with option 1:
-![open](assets/images/open_B.png){#open}
-
-You should now see a list of your repository contents in the explorer window. 
-
-## Set up VS Code
-VS Code is great in that it allows you to do almost everything from within a single software application. This makes it perfect for creating Markdown documentation for your repository.
-
-1. From the VS Code menu bar, select `Terminal > New Terminal`
-![open_terminal](assets/images/open_terminal.png){#open_terminal}
-
-2. At the bottom of your screen, you should see the "Terminal" panel now open. By default, the path should match the repository location in your explorer. The first thing we'll want to do is **activate** your Conda virtual environment, which I called "docs". After you activate it, you should see the name listed in parenthesis to the left:
-![activate_env](assets/images/activate_env.png){#activate_env}
-
-3. In the "Explorer" (or from the "Terminal"), create a new directory/folder called "docs". This is where we will store the documentation in your repository.
-
-    !!! note "Explorer vs Terminal"
-        If you're not comfortable or familiar with the "Terminal", you can just use the "Explorer". The "Terminal" is more likely to be new to Windows users, whereas Linux users should be very familiar...Mac, you're comfortably in the middle.
-
-4. Move into the new directory/folder called "docs" and create
-    * a new file called "mkdocs.yml"
-    * a nested directory/folder called "src"
-    
-    You can do this in either the "Explorer" or "Terminal". If executing in the "Terminal", you'd type the following commmands:
-
-    `touch mkdocs.yml`
-
-    `mkdir ./src`
-    
-5. We'll go over the contents of 
+The workflow presented here is intentionally simple. Create content, preview it locally, make changes, and repeat. As your documentation grows, you can expand the structure and configuration as needed.
 
 
-## Publish to GitHub
+## Create a Minimum Working Example
+At the end of the [Configuration](config.md) section, our project structure looked like:
+
+    repository/
+    └── docs/
+        ├── mkdocs.yml
+        └── src/
+
+Open the ++"mkdocs.yml"++ file and add the following lines of code:
+
+    site_name: My Docs
+    docs_dir: src
+
+where "My Docs" is simply the title of your page. The file contents should look something like this:
+
+![min_config](assets/images/min_config.png){#min_config}
+
+This is the minimum configuration required for MkDocs to generate a website.
+
+## Launch the Development Server
+With the minimum configuration in place, return to the [VS Code terminal](config.md#open-a-terminal). Ensure your virtual environment is active, then start the **local** development server:
+
+    mkdocs serve
+
+![launch_server](assets/images/launch_server.png){#launch_server}
+
+Upon pressing enter, the terminal should display a local address similar to: `http://127.0.0.1:8000/`
+
+![server_running](assets/images/server_running.png){#server_running}
+
+Open this address in a web browser. You should immediately see your documentation site. While there is not much content to display yet, this confirms that MkDocs is installed correctly and that your local development environment is working as expected.
+
+During development, it is often helpful to leave both the browser and server running. As you modify and save files, MkDocs will automatically rebuild the site and refresh the displayed content.
+
+If you need another terminal while the server is running, simply open a new terminal window:
+
+![new_terminal](assets/images/new_terminal.png){#new_terminal}
+
+However, remember to activate your virtual environment if you plan to run any `mkdocs` commands.
+
+## Create Documentation Pages
+The source content for your documentation lives in the `\src` directory. To create a new page, simply add a Markdown file.
+
+For example:
+
+    src/
+    ├── index.md
+    └── getting_started.md
+
+Each Markdown file becomes a documentation page that can be included in the site navigation. Markdown is intentionally simple and easy to learn. While some advanced features depend on the MkDocs theme and extensions being used, most Markdown syntax is universal across platforms. If you're new to Markdown, this online [cheat sheet](https://github.com/adam-p/markdown-here/wiki/markdown-cheatsheet) is a handy reference.
+
+MkDocs supports nested directories, allowing content to be organized however best fits your project.
+
+## Configure Site Navigation
+As your documentation grows, you will typically update ++"mkdocs.yml"++ to define navigation menus, themes, extensions, and other site settings.
+
+Every project is different, so we will not examine every configuration option here. The [official MkDocs website](https://www.mkdocs.org/) contains extensive examples, and modern AI tools can often help generate or modify configurations for specific needs.
+
+The example below shows a snapshot of the configuration file used for this documentation:
+
+![config_yml_example](assets/images/config_yml_example.png){#config_yml_example}
+
+## Develop and Iterate
+The most common workflow is:
+
+1. Create or modify Markdown content.
+2. Save the file.
+3. Review the result in your browser.
+4. Make adjustments.
+5. Repeat.
+
+Because MkDocs automatically rebuilds the site while the development server is running, documentation can be developed very quickly with immediate visual feedback.

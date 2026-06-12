@@ -5,14 +5,18 @@ repo_url: https://github.com/HMEC-UH/work_environments
 
 nav:
   - Welcome: index.md
+  - Connect with GitHub:
+    - Overview: github/index.md
+    - HMEC Org: github/hmec_org.md
   - Utility of Python:
     - Overview: python/index.md
     - Conda: python/conda.md
-    - IDEs: python/ides.md
+    - Spyder IDE: python/spyder_ide.md
   - Create Great Docs:
     - Overview: mkdocs/index.md
+    - Configuration: mkdocs/config.md
     - Workflow: mkdocs/workflow.md
-    - Configure: mkdocs/config.md
+    - Publish: mkdocs/publish.md
   - MATLAB Addiction:
     - Overview: matlab/index.md
     - WEC-Sim: matlab/wecsim.md
@@ -20,6 +24,12 @@ nav:
 
 theme:
   name: material
+  logo: assets/images/white_64.png
+  favicon: assets/images/green_64.png
+  icon:
+    repo: fontawesome/brands/github
+  palette:
+    - scheme: HMEC
   features:
     - navigation.tracking  # Updates URL bar dynamically as you scroll
     - navigation.indexes   # Allows folder titles to be clickable pages
@@ -37,3 +47,4 @@ markdown_extensions:
 
 extra_css:
   - stylesheets/alignments.css
+  - stylesheets/color_scheme.css
