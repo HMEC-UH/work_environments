@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#publish" class="md-skip">
+        <a href="#publish-with-github-pages" class="md-skip">
           Skip to content
         </a>
       
@@ -648,8 +648,6 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
-        
-      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
@@ -692,8 +690,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -702,10 +698,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#save-everything" class="md-nav__link">
+  <a href="#publish-with-github-pages" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Save Everything
+        Publish with GitHub Pages
       
     </span>
   </a>
@@ -713,10 +709,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#github-pages" class="md-nav__link">
+  <a href="#commit-changes-to-github" class="md-nav__link">
     <span class="md-ellipsis">
       
-        GitHub Pages
+        Commit Changes to GitHub
       
     </span>
   </a>
@@ -885,8 +881,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -895,10 +889,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#save-everything" class="md-nav__link">
+  <a href="#publish-with-github-pages" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Save Everything
+        Publish with GitHub Pages
       
     </span>
   </a>
@@ -906,10 +900,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#github-pages" class="md-nav__link">
+  <a href="#commit-changes-to-github" class="md-nav__link">
     <span class="md-ellipsis">
       
-        GitHub Pages
+        Commit Changes to GitHub
       
     </span>
   </a>
@@ -936,14 +930,44 @@
   
 
 
-<h1 id="publish">Publish</h1>
+  <h1>Publish</h1>
+
+<p>In the previous <a href="../workflow/">Workflow</a> section, we focused on developing documentation locally using VS Code and a web browser for live previews. Once you are satisfied with the content, the documentation can be published directly through GitHub Pages.</p>
+<h2 id="publish-with-github-pages">Publish with GitHub Pages</h2>
+<p>In the <a href="../config/#open-a-terminal">VS Code terminal</a>, with your virtual environment active, navigate to the directory containing <span class="keys"><kbd>mkdocs.yml</kbd></span> and run:</p>
+<div class="highlight"><pre><span></span><code>mkdocs gh-deploy
+</code></pre></div>
+<p><img alt="deploy" id="deploy" src="../assets/images/deploy.png" /></p>
+<p>MkDocs will automatically:</p>
 <ul>
-<li>One of the beautiful things about MkDocs is how easy it is to publish your content</li>
-<li>Up to this point, you've been building your documantion locally, using the built in server and VSCode</li>
-<li>Once you're satisfied with the local model, we'll 1) save our work and push back to GitHub, then 2) publish on GitHub.</li>
+<li>build the documentation website,</li>
+<li>create or update a gh-pages branch,</li>
+<li>push the generated site to GitHub.</li>
 </ul>
-<h2 id="save-everything">Save Everything</h2>
-<h2 id="github-pages">GitHub Pages</h2>
+<p>In the figure above, you can see <code>gh-deploy</code> automatically created a new branch called <span class="keys"><kbd>gh-pages</kbd></span>. Log in to GitHub, navigate to your repository, and you should now see two branches:</p>
+<p><img alt="new_branch" id="new_branch" src="../assets/images/new_branch.png" /></p>
+<div class="admonition warning">
+<p class="admonition-title">Do Not Edit <span class="keys"><kbd>gh-pages</kbd></span> Branch</p>
+<p>You generally do not need to interact with the <span class="keys"><kbd>gh-pages</kbd></span> branch directly. Continue working on the <span class="keys"><kbd>main</kbd></span> branch and let MkDocs manage deployment automatically.</p>
+<p>The <span class="keys"><kbd>gh-pages</kbd></span> branch contains the generated website files and is recreated each time <code>mkdocs gh-deploy</code> is executed. Any manual changes made to this branch will likely be overwritten during the next deployment.</p>
+</div>
+<p>If this is the first time you have published documentation from the repository, verify the following settings in GitHub:</p>
+<ol>
+<li>The repository is set to <span class="keys"><kbd>public</kbd></span> (required for GitHub Pages on free personal accounts).</li>
+<li>GitHub Pages is configured to deploy from the <span class="keys"><kbd>gh-pages</kbd></span> branch.</li>
+</ol>
+<p>These settings can be found in your repository <span class="keys"><kbd>Settings</kbd></span> menu. The GitHub Pages configuration is located under the <span class="keys"><kbd>Pages</kbd></span> settings:</p>
+<p><img alt="deploy_from_branch" id="deploy_from_branch" src="../assets/images/deploy_from_branch.png" /></p>
+<p>Once GitHub Pages is configured, your documentation should become available within a few minutes at the URL provided in the <span class="keys"><kbd>Pages</kbd></span> settings.</p>
+<p>If you need to change the repository visibility, navigate to the  <span class="keys"><kbd>Settings &gt; General</kbd></span> menu and scroll to the bottom of the page under <span class="keys"><kbd>Danger Zone &gt; Change repository visibility</kbd></span>.</p>
+<h2 id="commit-changes-to-github">Commit Changes to GitHub</h2>
+<p>Publishing documentation makes the generated website available online, but it does not replace normal version control practices.</p>
+<p>Remember to commit and push your source files back to the repository so that changes are preserved and available to other contributors:</p>
+<div class="highlight"><pre><span></span><code>git add .
+git commit -m &quot;Updated documentation&quot;
+git push
+</code></pre></div>
+<p>Avoid leaving changes only on your local machine. The source files stored in the repository are the authoritative version of the documentation and should be kept synchronized with the published website.</p>
 
 
 
