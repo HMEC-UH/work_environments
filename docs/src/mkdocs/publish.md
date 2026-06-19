@@ -40,9 +40,52 @@ If you need to change the repository visibility, navigate to the  ++"Settings > 
 ## Commit Changes to GitHub
 Publishing documentation makes the generated website available online, but it does not replace normal version control practices.
 
-Remember to commit and push your source files back to the repository so that changes are preserved and available to other contributors:
+Remember to commit and push your source files back to the repository so that changes are preserved and available to other contributors.
 
-    git add .
+Before doing so, it is good practice to tell GitHub to ignore generated build files. When MkDocs builds a website, it creates a `site/` directory containing the generated HTML, CSS, JavaScript, and other assets used by the published site. These files can always be regenerated from the source content and therefore do not need to be stored in the repository.
+
+If a `site/` directory exists, your project structure may look something like:
+
+    repository/
+    └──docs/
+        ├── mkdocs.yml
+        ├── site/
+        └── src/
+            ├── index.md
+            └── getting_started.md
+    
+Navigate to your main repository directory and create a new **hidden** file called ++".gitignore"++. 
+
+    repository/
+    ├── .gitignore
+    └──docs/
+        ├── mkdocs.yml
+        ├── site/
+        └── src/
+            ├── index.md
+            └── getting_started.md
+
+!!! warning "Hidden Files"
+    Hidden files begin with a **period** (.) followed by the name. Do not forget the leading period!
+
+            
+![git_ignore](assets/images/git_ignore.png){#git_ignore}
+
+Inside the file, on a new line, add:
+
+    site/
+
+and save the file.
+
+We will commit this file first:
+
+    git add .gitignore
+    git commit -m "add gitignore file"
+    git push
+
+Now we can safely commit the remainder of our documentation while leaving any generated build files behind:
+
+    git add --all
     git commit -m "Updated documentation"
     git push
 

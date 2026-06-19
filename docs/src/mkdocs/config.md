@@ -82,7 +82,7 @@ Inside the new `docs` directory (or whatever name you chose), create
 * a new file called "mkdocs.yml"
 * a nested directory/folder called "src"
 
-The `mkdocs.yml` file contains the primary MkDocs configuration settings. The `src` directory will contain the Markdown files and other assets used to build the documentation site.
+The `mkdocs.yml` file contains the primary MkDocs configuration settings. The `/src` directory will contain the Markdown files and other assets used to build the documentation site.
 
 !!! note "Directory Names Are Flexible"
     The official MkDocs [documentation](https://www.mkdocs.org/getting-started/) uses a directory named `docs` for source content. If you also place your MkDocs project inside a repository folder named `docs`, you may end up with paths such as:

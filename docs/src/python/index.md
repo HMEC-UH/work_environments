@@ -1,4 +1,6 @@
-# Overview
+In many introductory courses, software installation is treated as a simple process: download a program, install it, and begin working. While this approach works for standalone applications, scientific computing and engineering workflows are often more complex. Modern technical projects rely on collections of libraries, toolboxes, and dependencies that evolve over time and may require different versions to function correctly. As projects grow, managing these dependencies becomes increasingly important.
+
+# Python
 Python is often included as part of the operating system (OS) environment, particularly on Linux systems. Regardless of the platform, it is good practice to create isolated Python virtual environments for project work rather than using the system-wide installation directly. This helps avoid dependency conflicts and prevents accidental changes to OS-level utilities or packages that may rely on the system Python installation.
 
 !!! note "Virtual Environment"

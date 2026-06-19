@@ -44,7 +44,7 @@ If you need another terminal while the server is running, simply open a new term
 However, remember to activate your virtual environment if you plan to run any `mkdocs` commands.
 
 ## Create Documentation Pages
-The source content for your documentation lives in the `\src` directory. To create a new page, simply add a Markdown file.
+The source content for your documentation lives in the `/src` directory. To create a new page, simply add a Markdown file.
 
 For example:
 

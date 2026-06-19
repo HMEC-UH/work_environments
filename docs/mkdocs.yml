@@ -12,12 +12,13 @@ nav:
     - Overview: python/index.md
     - Conda: python/conda.md
     - Spyder IDE: python/spyder_ide.md
-  - Create Great Docs:
+    - VS Code IDE: python/vscode_ide.md
+  - Creating Great Docs:
     - Overview: mkdocs/index.md
     - Configuration: mkdocs/config.md
     - Workflow: mkdocs/workflow.md
     - Publish: mkdocs/publish.md
-  - MATLAB Addiction:
+  - Hooked on MATLAB:
     - Overview: matlab/index.md
     - WEC-Sim: matlab/wecsim.md
     - Linking w/ Python: matlab/py_linking.md    
@@ -48,3 +49,10 @@ markdown_extensions:
 extra_css:
   - stylesheets/alignments.css
   - stylesheets/color_scheme.css
+
+plugins:
+  - search
+  - privacy:
+      links_attr_map:
+        target: _blank
+        rel: noopener noreferrer

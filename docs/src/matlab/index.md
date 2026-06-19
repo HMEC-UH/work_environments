@@ -1,3 +1,5 @@
+MATLAB has been a staple of engineering education for decades. Many students encounter it through inexpensive academic licenses, become comfortable with the ecosystem, and continue using it throughout their careers. If you ask me, it is a brilliantly executed long-term business strategy. Nevertheless, the software is excellent, and as an academic research unit we continue to rely heavily on the extensive toolbox ecosystem it provides.
+
 The goal of the instructions below is to get WEC-Sim up and running within MATLAB. The material provided here is intended to complement the official [WEC-Sim documentation](https://wec-sim.github.io/WEC-Sim/main/user/getting_started.html) by offering additional explanation, alternative approaches, and beginner-oriented insights that may help clarify the setup process. If you encounter any issues during installation or configuration, please refer to the official WEC-Sim documentation as the primary reference. If you are still stuck or have questions, do not hesitate to reach out for assistance.
 
 # MATLAB

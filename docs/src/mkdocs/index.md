@@ -1,6 +1,6 @@
-HMEC is working to accelerate marine energy development in Hawaii and across the Pacific region. Achieving that goal requires more than research, projects, and partnerships—it requires a way to capture knowledge, share lessons learned, and make valuable resources accessible to the people who need them. As the marine energy community continues to grow, HMEC is building not only a website — visit us at [hmec.us](https://www.hmec.us/) — but a shared knowledge hub that helps connect information, people, and opportunities.
+Good documentation is one of the most valuable assets a project can produce. It helps preserve institutional knowledge, supports onboarding, reduces duplicated effort, and makes technical information more accessible to both current and future contributors. Whether documenting software, research activities, laboratory procedures, lesson plans, or project workflows, clear documentation helps transform individual experience into shared knowledge.
 
-One of the primary tools we use to build and maintain that knowledge base is MkDocs.
+One of the primary tools HMEC uses to create and maintain documentation is MkDocs.
 
 # MkDocs
 
