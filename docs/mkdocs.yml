@@ -13,16 +13,16 @@ nav:
     - Conda: python/conda.md
     - Spyder IDE: python/spyder_ide.md
     - VS Code IDE: python/vscode_ide.md
+  - Hooked on MATLAB:
+    - Overview: matlab/index.md
+    - WEC-Sim: matlab/wecsim.md
+    - Linking w/ Python: matlab/py_linking.md    
   - Creating Great Docs:
     - Overview: mkdocs/index.md
     - Configuration: mkdocs/config.md
     - Workflow: mkdocs/workflow.md
     - Publish: mkdocs/publish.md
-  - Hooked on MATLAB:
-    - Overview: matlab/index.md
-    - WEC-Sim: matlab/wecsim.md
-    - Linking w/ Python: matlab/py_linking.md    
-
+    
 theme:
   name: material
   logo: assets/images/white_64.png
