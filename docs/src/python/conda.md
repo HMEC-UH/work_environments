@@ -25,3 +25,4 @@ Once you get everything installed — assuming you side "yes" to initialize — 
 
 Now that Miniconda is installed, we can create isolated Python environments for your work. These environments act as self-contained workspaces where you can install packages, experiment freely, and make changes without affecting your system-wide Python installation. If an environment becomes unstable or misconfigured, it can simply be removed and recreated from scratch.
 
+## Creating Your First Virtual Environment
