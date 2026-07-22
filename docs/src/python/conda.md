@@ -8,7 +8,7 @@ Managing Python dependencies manually is generally impractical for computing wor
 ## Miniconda
 For most users in this course, Miniconda or Miniforge will be sufficient and are generally preferred due to their smaller installation size and greater flexibility. In this course, we will use Miniconda, while frequently installing packages from the `conda-forge` channel, a community-maintained repository that serves as the default package source for Miniforge.
 
-Head over to the Miniconda [installation page](https://www.anaconda.com/docs/getting-started/miniconda/install/overview) and follow the instructions for your OS.
+Head over to the Miniconda, download the [installation tool](https://www.anaconda.com/download/success) and follow the instructions for your OS.
 
 !!! note "On Windows"
     You will be using the [Anaconda Prompt](https://www.anaconda.com/docs/getting-started/miniconda/install/windows-gui-install#verify-your-install) to access your command line terminal.
