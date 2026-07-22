@@ -11,7 +11,7 @@ For most users in this course, Miniconda or Miniforge will be sufficient and are
 Head over to the Miniconda, download the [installation tool](https://www.anaconda.com/download/success) and follow the instructions for your OS.
 
 !!! note "On Windows"
-    You will be using the [Anaconda Prompt](https://www.anaconda.com/docs/getting-started/miniconda/install/windows-gui-install#verify-your-install) to access your command line terminal.
+    You will be using the [Anaconda Prompt](https://www.anaconda.com/docs/getting-started/miniconda/install/windows-gui-install#verify-your-install) to access your command line terminal. Go to the Windows  "search" and type in "Anaconda Promt", then launch the prompt.
 
 Once you get everything installed — assuming you side "yes" to initialize — your command prompt should include ++"(base)"++ to indicate that the "base" environment is active:
 
