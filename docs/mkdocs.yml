@@ -7,13 +7,13 @@ nav:
   - Welcome: index.md
   - Connect with GitHub:
     - Overview: github/index.md
-    - HMEC Org: github/hmec_org.md
-  - Utility of Python:
+    - HMEC Organization: github/hmec_org.md
+  - Developing with Python:
     - Overview: python/index.md
     - Conda: python/conda.md
     - Spyder IDE: python/spyder_ide.md
-    - VS Code IDE: python/vscode_ide.md
-  - Hooked on MATLAB:
+    - VS Code IDE: python/vs_code_ide.md
+  - Engineering with MATLAB:
     - Overview: matlab/index.md
     - WEC-Sim: matlab/wecsim.md
     - Linking w/ Python: matlab/py_linking.md    
